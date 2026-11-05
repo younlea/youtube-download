@@ -1,0 +1,6 @@
+#!/bin/bash
+# Starts the YouTube->MP3 server. Used by cron @reboot.
+cd "$(dirname "$0")"
+export PATH=/home/younlea/.nvm/versions/node/v22.19.0/bin:/home/younlea/.local/bin:/usr/local/bin:/usr/bin:/bin
+export AUTH='admin:CHANGE_ME,kid:CHANGE_ME' PORT=8780
+exec python3 app.py >> server.log 2>&1

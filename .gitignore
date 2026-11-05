@@ -1,0 +1,4 @@
+download/
+server.log
+run.sh
+__pycache__/
